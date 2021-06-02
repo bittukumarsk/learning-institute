@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Learning Institute | Registeration </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700&display=swap" rel="stylesheet">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Loader Section Start -->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-inner-item">
+                <div class="loader-inner-item">
+                    <div class="loader-inner-item">
+                        <div class="loader-inner-item">
+                            <div class="loader-inner-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Loader Section Finish -->
+
+    <!-- Header Section Start -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <!-- Brand Logo -->
+                <a href="index.html" class="logo">
+                    <img src="images/logo-trans.png" alt="Logo">
+                </a>
+                <!-- Menu Toggle Buttons -->
+                <div class="hamburger-menu">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
+                </div>
+                <!-- Navigation Links -->
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"> About Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses/index.html"> Courses </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html"> Gallery </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="branches.html"> Branches </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"> Contact Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="active nav-link" href="register.html"> Register </a>
+                    </li>
+                    <li class="nav-item login">
+                        <a class="nav-link" href="login.html" class="login"> Login </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section Finish -->
+
+    <!-- Form Section Start -->
+    <section class="form">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h2> Registeration Form </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <form id="form" method="post">
+                        <div class="row-inner">
+                            <div class="form-control">
+                                <label for="fname"> First Name </label>
+                                <input type="text" id="fname" placeholder="First Name" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div>
+                            <div class="form-control">
+                                <label for="lname"> Last Name </label>
+                                <input type="text" id="lname" placeholder="Last Name" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div>
+                        </div>
+                        <div class="row-inner">
+                            <div class="form-control">
+                                <label for="dob"> Date of Birth </label>
+                                <input type="date" id="dob" placeholder="Date of Birth" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div>   
+                            <div class="form-control">
+                                <label for="gender"> Gender </label>
+                                <select id="gender" required>
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div> 
+                        </div>
+                        <div class="form-control">
+                            <label for="email"> Email Address </label>
+                            <input type="email" id="email" placeholder="srivastavamit@gmail.com" required>
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small> Error Message </small>
+                        </div>
+                        <div class="row-inner">
+                            <div class="form-control">
+                                <label for="password"> Password</label>
+                                <input type="password" id="password" placeholder="Password" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div>
+                            <div class="form-control">
+                                <label for="conPassword"> Confirm Password </label>
+                                <input type="password" id="conPassword" placeholder="Confirm Password" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="slct1"> Course Category </label>
+                            <select id="slct1" required name="slct1" onchange="populate(this.id,'slct2')">
+                                <option value=""> Select Category </option>
+                                <option value="Basic Computer Courses (BCC)"> Basic Computer Courses (BCC) </option>
+                                <option value="Advance Courses (AC)"> Advance Courses (AC) </option>
+                                <option value="Programming Languages (PL)"> Programming Languages (PL) </option>
+                                <option value="Professional Courses (PC)"> Professional Courses (PC) </option>
+                            </select>
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small> Error Message </small>
+                        </div>
+                        <div class="form-control">
+                            <label for="slct2"> Courses Name </label>
+                            <select id="slct2" name="slct2" required>
+                                <option value=""> Select Course First </option>
+                            </select>
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small> Error Message </small>
+                        </div>
+                        <div class="form-control">
+                            <label for="address"> Address </label>
+                            <textarea type="textarea" id="address" placeholder="Your Complete Address" required></textarea>
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small> Error Message </small>
+                        </div>
+                        <div class="row-inner">   
+                            <div class="form-control">
+                                <label for="pincode"> Postal Code </label>
+                                <input type="text" id="pincode" maxlength="6" placeholder="Pin Code" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div>
+                            <div class="form-control">
+                                <label for="mobile"> Phone Number </label>
+                                <input type="text" id="mobile" maxlength="10" placeholder="Mobile Number" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small> Error Message </small>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <div class="terms">
+                                <label for="agree" class="check">
+                                        <input type="checkbox" id="agree" required>
+                                        <span class="checkmark"></span>
+                                </label>
+                                <label for="agree" class="term"> Agreed to terms and conditions. </label>
+                            </div>
+                        </div> 
+                        <input onclick="return formValidate()" type="submit" value="Register" class="button">
+                        <p>Already have an Account? <a href="login.jsp"> Login Here.</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form Section Finish -->
+
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="main-links">
+            <div class="container">
+                <div class="links">
+                    <div class="column">
+                        <h3> Links </h3>
+                        <a href="index.html"> Home </a>
+                        <a href="about.html"> About Us </a>
+                        <a href="courses/index.html"> Courses </a>
+                        <a href="gallery.html"> Gallery </a>
+                        <a href="branches.html"> Branches </a>
+                        <a href="contact.html"> Contact Us </a>
+                    </div>
+                    <div class="column">
+                        <h3> Students </h3>
+                        <a href="#"> Dashboard </a>
+                        <a href="#"> View Courses </a>
+                        <a href="#"> Courses </a>
+                        <a href="#"> Register </a>
+                        <a href="#"> Branches </a>
+                    </div>
+                    <div class="column">
+                        <h3> Admins </h3>
+                        <a href="#"> Dashboard </a>
+                        <a href="#"> View Courses </a>
+                        <a href="#"> Courses </a>
+                        <a href="#"> Register </a>
+                        <a href="#"> Branches </a>
+                    </div>
+                    <div class="column">
+                        <h3> Teachers </h3>
+                        <a href="#"> Dashboard </a>
+                        <a href="#"> View Courses </a>
+                        <a href="#"> Courses </a>
+                        <a href="#"> Register </a>
+                        <a href="#"> Branches </a>
+                    </div>
+                    <div class="column social">
+                        <div class="connect">
+                            <h3> Get in Touch </h3>
+                            <a href="#"> <i class="fa fa-youtube-play"></i> </a>
+                            <a href="#"> <i class="fa fa-instagram"></i> </a>
+                            <a href="#"> <i class="fa fa-facebook"></i> </a>
+                            <a href="#"> <i class="fa fa-twitter"></i> </a>
+                        </div>
+                        <div class="newsletter">
+                            <h3> Subscribe For Newsletter </h3>
+                            <div class="input-group">
+                                <input type="email" name="email" id="email">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <hr>
+                <p> Copyright &copy; All Rights Reserved. <a href="index.html"> SEIIT Learning Institute. </a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+	<!-- Scroll Button -->
+	<div class="scrolltop float-right">
+        <i class="fa fa-chevron-up" onclick="goToTop()" id="myBtn"></i>  
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Learning Institute | View All Students </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Font Awesome Link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Google Font Link -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700&display=swap" rel="stylesheet">
+	<!-- Favicon Link -->
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<!--  JQuery Link -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			$(".sidebar-menu li").click(function()
+			{
+				$(".sidebar-menu li").removeClass("active");
+				$(this).addClass("active");
+			});
+			$(".open").click(function()
+			{
+				$(".sidebar-inner").removeClass("hide");
+				$(".main-container").removeClass("hide-sidebar");
+				$("footer").addClass("show-sidebar");
+			});
+			$(".close").click(function()
+			{
+				$(".sidebar-inner").addClass("hide");
+				$(".main-container").addClass("hide-sidebar");
+				$("footer").removeClass("show-sidebar");
+			});
+		});
+	</script>
+</head>
+<body onload="renderDate()">
+	<!-- Loader Section Start -->
+	<div class="loader">
+		<div class="loader-inner">
+			<div class="loader-inner-item">
+				<div class="loader-inner-item">
+					<div class="loader-inner-item">
+						<div class="loader-inner-item">
+							<div class="loader-inner-item"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Loader Section Finish -->
+
+	<!-- Header Section Start -->
+	<header class="header">
+		<div class="container">
+			<div class="nav">
+				<!-- Brand Logo -->
+				<a href="../index.html" class="logo">
+				<img src="images/logo-trans.png" alt="Logo">
+				</a>
+				<!-- Logout Button -->
+				<div class="logout">
+					<form action="login.html">
+						<button type="submit"> <i class="fa fa-power-off"></i> Logout </button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header Section Finish -->
+
+	<!-- Main Content -->
+	<section class="main-container">
+		<div class="container">
+			<div class="sidebar">
+				<div class="open"> <i class="fa fa-bars"></i> </div>
+				<div class="sidebar-inner">
+					<div class="close"> <i class="fa fa-window-close"></i> </div>
+					<div class="profile-info">
+						<div class="profile-img">
+							<img src="../images/Extra Images/1 (4).jpg" alt="Admin Image" title="Admin Image">
+						</div>
+						<div class="profile-data">
+							<p class="name"> Welcome, Bittu Kumar </p>
+						</div>
+					</div>
+					<ul class="sidebar-menu">
+						<li> 
+							<a href="index.html">
+								<div class="icon"> <i class="fa fa-tachometer"></i> </div>
+								<div class="title"> Dashboard </div>
+							</a>
+						</li>
+						<li class="active">
+							<a>
+								<div class="icon"> <i class="fa fa-graduation-cap"></i> </div>
+								<div class="title"> Student </div>
+								<div class="arrow"> <i class="fa fa-caret-down"></i> </div>
+							</a>
+							<ul class="accordion">
+								<li>
+									<a href="add-student.html"> <i class="fa fa-circle-o"></i> Add New Student </a>
+								</li>
+								<li>
+									<a href="all-student.html" class="active"> <i class="fa fa-circle-o"></i> View All Students </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								<div class="icon"> <i class="fa fa-users"></i> </div>
+								<div class="title"> Teacher </div>
+								<div class="arrow"> <i class="fa fa-caret-down"></i> </div>
+							</a>
+							<ul class="accordion">
+								<li>
+									<a href="add-teacher.html"><i class="fa fa-circle-o"></i> Add New Teacher </a>
+								</li>
+								<li>
+									<a href="all-teachers.html"><i class="fa fa-circle-o"></i> View All Teachers </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								<div class="icon"> <i class="fa fa-list-alt"></i> </div>
+								<div class="title"> Course </div>
+								<div class="arrow"> <i class="fa fa-caret-down"></i> </div>
+							</a>
+							<ul class="accordion">
+								<li>
+									<a href="add-course.html"><i class="fa fa-circle-o"></i> Add New Course </a>
+								</li>
+								<li>
+									<a href="all-courses.html"><i class="fa fa-circle-o"></i> View All Courses </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								<div class="icon"> <i class="fa fa-list-ul"></i> </div>
+								<div class="title"> Course Category </div>
+								<div class="arrow"> <i class="fa fa-caret-down"></i> </div>
+							</a>
+							<ul class="accordion">
+								<li>
+									<a href="add-category.html"><i class="fa fa-circle-o"></i> Add New Category </a>
+								</li>
+								<li>
+									<a href="all-categories.html"><i class="fa fa-circle-o"></i> View All Categories </a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="admin-profile.html">
+								<div class="icon"> <i class="fa fa-user-circle-o"></i> </div>
+								<div class="title"> Profile </div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="main-content">
+				<div class="container">
+					<div class="row">
+						<div class="heading">
+							<h2> All Students Detail </h2>
+						</div>
+					</div>
+					<div class="row">
+						<table>
+							<tr>
+								<th> Id </th>
+								<th> Name </th>
+								<th> Email Address </th>
+								<th> Mobile No. </th>
+								<th colspan="2"> Operations </th>
+							</tr>
+							<tr>
+								<td> 1 </td>
+								<td> Amit Srivastav </td>
+								<td> srivastavamit@gmail.com </td>
+								<td> 7258965412 </td>
+								<td>
+									<form action="edit">
+										<button class="edit" type="submit"> <i class="fa fa-pencil"></i> Edit </button>
+									</form>
+								</td>
+								<td>
+									<form action="delete">
+										<button class="delete" type="submit"> <i class="fa fa-trash-o"></i> Delete </button>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td> 2 </td>
+								<td> Shivaay BkSk </td>
+								<td> itsbksk@gmail.com </td>
+								<td> 8745695210 </td>
+								<td>
+									<form action="edit">
+										<button class="edit" type="submit"> <i class="fa fa-pencil"></i> Edit </button>
+									</form>
+								</td>
+								<td>
+									<form action="delete">
+										<button class="delete" type="submit"> <i class="fa fa-trash-o"></i> Delete </button>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td> 4 </td>
+								<td> Bittu Kumar </td>
+								<td> bk38194@gmail.com </td>
+								<td> 9632587410 </td>
+								<td>
+									<form action="edit">
+										<button class="edit" type="submit"> <i class="fa fa-pencil"></i> Edit </button>
+									</form>
+								</td>
+								<td>
+									<form action="delete">
+										<button class="delete" type="submit"> <i class="fa fa-trash-o"></i> Delete </button>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td> 5 </td>
+								<td> Amita Sharma </td>
+								<td> amitajii@gmail.com </td>
+								<td> 7258965412 </td>
+								<td>
+									<form action="edit">
+										<button class="edit" type="submit"> <i class="fa fa-pencil"></i> Edit </button>
+									</form>
+								</td>
+								<td>
+									<form action="delete">
+										<button class="delete" type="submit"> <i class="fa fa-trash-o"></i> Delete </button>
+									</form>
+								</td>
+							</tr>
+							<tr>
+								<td> 7 </td>
+								<td> Phenomianl Bk </td>
+								<td> phenominal@gmail.com </td>
+								<td> 8969854128 </td>
+								<td>
+									<form action="edit">
+										<button class="edit" type="submit"> <i class="fa fa-pencil"></i> Edit </button>
+									</form>
+								</td>
+								<td>
+									<form action="delete">
+										<button class="delete" type="submit"> <i class="fa fa-trash-o"></i> Delete </button>
+									</form>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Main Content End -->
+
+	<!-- Footer Section Start -->
+	<footer class="show-sidebar">
+		<div class="main-links">
+			<div class="container">
+				<div class="links">
+					<div class="column">
+						<h3> Site Links </h3>
+						<a href="../index.html"> Home </a>
+						<a href="../about.html"> About Us </a>
+						<a href="../courses/index.html"> Courses </a>
+						<a href="../gallery.html"> Gallery </a>
+						<a href="../branches.html"> Branches </a>
+						<a href="../contact.html"> Contact Us </a>
+					</div>
+					<div class="column">
+						<h3> Students </h3>
+						<a href="#"> Dashboard </a>
+						<a href="#"> Register </a>
+						<a href="#"> Login </a>
+					</div>
+					<div class="column">
+						<h3> Admins </h3>
+						<a href="index.html"> Dashboard </a>
+						<a href="login.html"> Login </a>
+					</div>
+					<div class="column">
+						<h3> Teacher </h3>
+						<a href="../teacher/index.html"> Dashboard </a>
+						<a href="../teacher/login.html"> Login </a>
+					</div>
+					<div class="column social">
+						<div class="connect">
+							<h3> Get in Touch </h3>
+							<a href="#"> <i class="fa fa-youtube-play"></i> </a>
+							<a href="#"> <i class="fa fa-instagram"></i> </a>
+							<a href="#"> <i class="fa fa-facebook"></i> </a>
+							<a href="#"> <i class="fa fa-twitter"></i> </a>
+						</div>
+						<div class="newsletter">
+							<h3> Subscribe For Newsletter </h3>
+							<div class="input-group">
+								<input type="email" name="email" id="email">
+								<input type="submit" value="Submit">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<hr>
+				<p> Copyright &copy; All Rights Reserved. <a href="index.html"> SEIIT Learning Institute. </a></p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section End -->
+
+	<!-- Scroll Button -->
+	<div class="scrolltop float-right">
+		<i class="fa fa-chevron-up" onclick="goToTop()" id="myBtn"></i>  
+	</div>
+	
+	<script src="../js/main.js"></script>
+</body>
+</html>
