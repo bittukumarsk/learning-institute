@@ -17,7 +17,7 @@ Welcome to the Learning Institute Management System repository! This project aim
 
 To get started with the Learning Institute Management System, follow these steps:
 
-1. **Clone the Repository**: Clone this repository to your local machine using
+1. **Clone the Repository**: Clone this repository to your local machine using : <br>
    `git clone https://github.com/bittukumarsk/learning-institute.git`.
 
 ## Contributing
@@ -32,6 +32,6 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 ## Contact
 
-For any questions, issues, or inquiries regarding the Learning Institute Management System, feel free to contact the project maintainer:
+For any questions, issues, or inquiries regarding the Learning Institute Management System, feel free to contact me.
 
 - Name: [Bittu Kumar](https://github.com/bittukumarsk)
